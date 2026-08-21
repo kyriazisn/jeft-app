@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}jeft — Give without questions{% endblock %}
+{% block content %}
+<section class="hero py-5">
+    <div class="container py-5">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-7">
+                <p class="eyebrow">Give without questions</p>
+                <h1 class="display-3 fw-bold mb-4">A simple gift can change someone’s day.</h1>
+                <p class="lead text-secondary mb-4">Choose a request. We handle the purchase and delivery. No stories, no awkward conversations, no personal details shared.</p>
+                <div class="d-flex flex-wrap gap-3">
+                    <a class="btn btn-dark btn-lg" href="#requests">Discover requests</a>
+                    <a class="btn btn-outline-dark btn-lg" href="#create">Ask for something</a>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="feature-card shadow-sm">
+                    <span class="badge text-bg-light mb-4">How it works</span>
+                    <div class="step"><span>01</span><p>Someone posts a specific request.</p></div>
+                    <div class="step"><span>02</span><p>A giver chooses it anonymously.</p></div>
+                    <div class="step"><span>03</span><p>jeft buys and delivers the gift.</p></div>
+                    <div class="step mb-0"><span>04</span><p>The giver receives delivery confirmation.</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="requests" class="container py-5">
+    <div class="d-flex justify-content-between align-items-end mb-4">
+        <div><p class="eyebrow mb-2">Discover</p><h2 class="fw-bold mb-0">Requests waiting to be fulfilled</h2></div>
+        <span class="text-muted small">No personal stories required</span>
+    </div>
+    <div class="row g-4"><div class="col-12"><div class="empty-state"><h3>No requests yet</h3><p class="text-secondary">The first requests will appear here once the platform opens.</p><a href="#create" class="btn btn-dark">Create the first request</a></div></div></div>
+</section>
+<section id="create" class="container py-5"><div class="cta-card"><div><p class="eyebrow mb-2">For requesters</p><h2 class="fw-bold">Request something meaningful.</h2><p class="mb-0 text-secondary">You decide what to share. The platform handles the rest.</p></div><button class="btn btn-dark" type="button" disabled>Coming next</button></div></section>
+{% endblock %}
