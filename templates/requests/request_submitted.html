@@ -1,0 +1,3 @@
+{% extends "base.html" %}
+{% block title %}Request submitted — jeft{% endblock %}
+{% block content %}<div class="container py-5" style="max-width: 680px;"><p class="eyebrow">Request received</p><h1 class="fw-bold">Your request is under review.</h1><p class="lead text-secondary">We will publish it once it passes the platform checks. No personal story is required.</p><a href="{% url 'home' %}" class="btn btn-dark">Back to requests</a></div>{% endblock %}

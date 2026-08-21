@@ -1,0 +1,3 @@
+{% extends "base.html" %}
+{% block title %}Active request — jeft{% endblock %}
+{% block content %}<div class="container py-5" style="max-width: 680px;"><p class="eyebrow">One active request</p><h1 class="fw-bold">You already have an active request.</h1><p class="text-secondary">Complete or cancel your current request before creating another one.</p><a href="{% url 'home' %}" class="btn btn-dark">Back to requests</a></div>{% endblock %}
