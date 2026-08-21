@@ -13,7 +13,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "apps.accounts",
+    "apps.accounts.apps.AccountsConfig",
     "apps.requests",
     "apps.fulfillment",
     "apps.catalog",
@@ -52,7 +52,12 @@ DATABASES = {"default": {
     "PORT": os.getenv("POSTGRES_PORT", "5432"),
 }}
 
+AUTH_USER_MODEL = "accounts.User"
+AUTHENTICATION_BACKENDS = ["django.contrib.auth.backends.ModelBackend"]
 AUTH_PASSWORD_VALIDATORS = []
+LOGIN_URL = "login"
+LOGIN_REDIRECT_URL = "home"
+LOGOUT_REDIRECT_URL = "home"
 LANGUAGE_CODE = "en-us"
 TIME_ZONE = "UTC"
 USE_I18N = True
